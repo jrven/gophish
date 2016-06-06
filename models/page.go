@@ -34,7 +34,6 @@ func (p *Page) parseHTML() error {
 	forms.Each(func(i int, f *goquery.Selection) {
 		// We always want the submitted events to be
 		// sent to our server
-		f.SetAttr("action", "")
 		if p.CaptureCredentials {
 			// If we don't want to capture passwords,
 			// find all the password fields and remove the "name" attribute.
